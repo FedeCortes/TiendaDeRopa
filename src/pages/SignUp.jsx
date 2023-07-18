@@ -1,8 +1,14 @@
-import React from 'react'
+import react from "react";
 
+import { useEffect } from "react";
+
+
+import Typography from "@mui/material/Typography";
 const SignUp = () => {
   return (
-    <div>SignUp</div>
+    <>
+  Sign up
+   </>
   )
 }
 
