@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import NavbarOk from "./NavbarOk";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <NavbarOk />
+      <div>Home</div>
+    </>
+  );
+};
 
-export default Home
+export default Home;
