@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
 const pages = ["Men's clothing", "Women's cloth", "Jewerely"];
 const settings = ["Profile", "Account", "Cart", "Logout"];
@@ -36,10 +37,15 @@ function NavbarOk() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "white", color: "black", width: "100%" }}
+    >
       <Container maxWidth="xl">
         <Toolbar style={{ width: "100%" }} disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <ShoppingBagIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -94,7 +100,9 @@ function NavbarOk() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <ShoppingBagIcon
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+          />
           <Typography
             variant="h5"
             noWrap
@@ -118,7 +126,7 @@ function NavbarOk() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "grey", display: "block" }}
               >
                 {page}
               </Button>
