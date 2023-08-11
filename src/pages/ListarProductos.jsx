@@ -28,8 +28,10 @@ const ListarProductos = () => {
         justifyContent: "center",
       }}
     >
-      {items.map((p, index) => (
-        <Item p={p} sx={{ margin: "20px" }} />
+       {items.map((p, index) => (
+        <Link to={`/details/${p.id}`} key={p.id} style={{ textDecoration: 'none' }}>
+          <Item p={p} style={{ margin: '20px' }} />
+        </Link>
       ))}
     </Grid>
   );
