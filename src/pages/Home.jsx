@@ -1,11 +1,11 @@
 import React from "react";
 import NavbarOk from "./NavbarOk";
-import ListarProductos from "./listarProductos";
+import ListarProductos from "./ListarProductos";
 
 const Home = () => {
   return (
     <>
-      <NavbarOk />
+      
 
       <ListarProductos />
     </>
