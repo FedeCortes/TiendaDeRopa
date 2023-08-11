@@ -26,6 +26,7 @@ const ListarProductos = () => {
         backgroundColor: "white",
         alignItems: "center",
         justifyContent: "center",
+        marginTop:"50px"
       }}
     >
        {items.map((p, index) => (
