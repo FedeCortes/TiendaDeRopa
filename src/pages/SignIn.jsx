@@ -26,23 +26,23 @@ const SignIn = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    //try {
+    try {
     console.log(data);
-    //const resp = await axios.post("http://localhost:3000/api/login", data);
-    /* if (resp.status == 200) {
-        signIn({
+    const resp = await axios.post("http://localhost:3000/api/login", data);
+     if (resp.status == 200) {
+        /* signIn({
           token: resp.data.token,
           expiresIn: 60,
           tokenType: "Bearer",
           authState: { email: data.email },
-        });
-        navigate("/home"); */
+        }); */
+        navigate("/home"); 
   };
-  /* } catch (error) {
+   } catch (error) {
       console.log(error.message);
       setLogin(true);
-    } */
-  //};
+    } 
+  };
 
   return (
     <ThemeProvider theme={defaultTheme}>

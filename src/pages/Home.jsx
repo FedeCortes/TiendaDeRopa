@@ -1,12 +1,10 @@
 import React from "react";
-import NavbarOk from "./NavbarOk";
-import ListarProductos from "./ListarProductos";
+import NavbarOk from "../components/NavbarOk";
+import ListarProductos from "../components/ListarProductos";
 
 const Home = () => {
   return (
     <>
-      
-
       <ListarProductos />
     </>
   );
