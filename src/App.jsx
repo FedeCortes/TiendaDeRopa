@@ -6,6 +6,9 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Details from "./pages/Details";
 import NavbarOk from "./components/NavbarOk";
+import Men from "./pages/Men";
+import Women from "./pages/Women";
+import Jewerly from "./pages/Jewerly";
 import CartItems from "./pages/CartItems";
 
 function App() {
@@ -19,7 +22,6 @@ function App() {
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/ListarProductos" element={<ListarProductos />} />
           <Route path="/Details/:id" element={<Details />} />
-          <Route path="/cart" element={<CartItems />} />
         </Routes>
       </BrowserRouter>
     </>
