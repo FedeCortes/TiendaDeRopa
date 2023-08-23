@@ -7,7 +7,7 @@ const favorites = () => {
     const resp = await axios.get("https://fakestoreapi.com/products");
     console.log(resp.data);
 
-    if (resp.data.lenght > 0) {
+    if (resp.data.length > 0) {
       setFavorites(resp.data);
     } else {
       setFavorites([]);

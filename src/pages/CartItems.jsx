@@ -12,7 +12,7 @@ const cart = () => {
     const resp = await axios.get("https://fakestoreapi.com/products");
     console.log(resp.data);
 
-    if (resp.data.lenght > 0) {
+    if (resp.data.length > 0) {
       setItems(resp.data);
     } else {
       setItems([]);
