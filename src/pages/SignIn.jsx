@@ -18,6 +18,8 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 const SignIn = () => {
   const defaultTheme = createTheme();
+  const navigate = useNavigate();
+  //const signIn = useSignIn()
 
   const {
     register,
@@ -27,21 +29,20 @@ const SignIn = () => {
 
   const onSubmit = async (data) => {
     try {
-    console.log(data);
-    const resp = await axios.post("http://localhost:3000/api/login", data);
-     if (resp.status == 200) {
+      console.log(data);
+      const resp = await axios.post("http://localhost:3000/api/login", data);
+      if (resp.status == 200) {
         /* signIn({
           token: resp.data.token,
           expiresIn: 60,
           tokenType: "Bearer",
           authState: { email: data.email },
-        }); */
-        navigate("/home"); 
-  };
-   } catch (error) {
+        });  */
+        navigate("http://localhost:3001/");
+      }
+    } catch (error) {
       console.log(error.message);
-      setLogin(true);
-    } 
+    }
   };
 
   return (
