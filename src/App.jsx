@@ -22,6 +22,10 @@ function App() {
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/ListarProductos" element={<ListarProductos />} />
           <Route path="/Details/:id" element={<Details />} />
+          <Route path="/Men" element={<Men />} />
+          <Route path="/Women" element={<Women />} />
+          <Route path="/Jewerly" element={<Jewerly />} />
+          <Route path="/cart" element={<CartItems />} />
         </Routes>
       </BrowserRouter>
     </>
