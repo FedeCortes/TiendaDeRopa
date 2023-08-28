@@ -28,21 +28,28 @@ const signUp = () => {
 
   const onSubmit = async (data) => {
     try {
-    console.log(data);
-    const resp = await axios.post("http://localhost:3000/api/register", data);
-     if (resp.status == 200) {
-        navigate("/signIn"); 
-  };
-   } catch (error) {
+      console.log(data);
+      const resp = await axios.post("http://localhost:3000/api/register", data);
+      if (resp.status == 200) {
+        navigate("/signIn");
+      }
+    } catch (error) {
       console.log(error.message);
-    } 
+    }
   };
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: "100vh", width: "100%" }}>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        component="main"
+        sx={{ height: "100vh" }}
+        mt={0}
+      >
         <CssBaseline />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid item xs={12} sm={8} md={5} elevation={6} square>
           <Box
             sx={{
               my: 8,
