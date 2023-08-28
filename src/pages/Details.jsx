@@ -11,15 +11,15 @@ const Details = () => {
   const productId = parseInt(id, 10);
   const producto = productos.find((p) => p.id === productId);
 
+  const getProductos = async () => {
+    try {
+      const resp = await axios.get('https://fakestoreapi.com/products');
+      setProductos(resp.data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
   useEffect(() => {
-    const getProductos = async () => {
-      try {
-        const resp = await axios.get('https://fakestoreapi.com/products');
-        setProductos(resp.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
 
     getProductos();
   }, []);

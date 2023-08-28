@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 
 const cart = () => {
   const [items, setItems] = useState([]);
-  const [precioTotal, setPrecioTotal] = useState({});
 
   const getItems = async () => {
     const resp = await axios.get("https://fakestoreapi.com/products");
@@ -24,41 +23,36 @@ const cart = () => {
   }, []);
 
   return (
-    <>
-      <Box
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "16px",
-          height: "100vh",
-        }}
-        style={{
-          backgroundColor: "#282c34",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "white",
-          marginLeft: "-8px",
-          marginRight: "-8px",
-          marginBottom: "-8px",
-          overflow: "hidden",
-        }}
-      >
-        {items.length > 0 &&
-          items.map((p, index) => {
-            return (
-              <Link
-                to={`/Details/${p.id}`}
-                style={{ textDecoration: "none" }}
-                key={index}
-              >
-                <Item p={p} sx={{ margin: "8px" }} />
-              </Link>
-            );
-          })}
-
-        {items.length == 0 && <h1>No cart items found</h1>}
-      </Box>
-    </>
+    <Box
+      sx={{
+        backgroundColor: "#000", // Color de fondo negro
+        color: "white",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center", // Centrado horizontal
+        justifyContent: "center", // Centrado vertical
+        paddingTop: "40px", // Espaciado superior
+      }}
+    >
+      {items.length > 0 ? (
+        items.map((p, index) => (
+          <Link
+            to={`/Details/${p.id}`}
+            style={{
+              textDecoration: "none",
+              display: "block",
+              marginBottom: "16px",
+            }}
+            key={index}
+          >
+            <Item p={p} sx={{ width: "200px" }} /> {/* Ajusta el ancho de la tarjeta */}
+          </Link>
+        ))
+      ) : (
+        <h1>No cart items found</h1>
+      )}
+    </Box>
   );
 };
 
